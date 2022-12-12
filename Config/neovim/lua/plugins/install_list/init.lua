@@ -46,22 +46,38 @@ return require('packer').startup(function()
 		end,
 	}
 
-	-- Автодополнение
+--	-- Автодополнение
+--	use {
+--		'hrsh7th/nvim-cmp',
+--		requires = {
+--			'L3MON4D3/LuaSnip',
+--			'saadparwaiz1/cmp_luasnip',
+--			'hrsh7th/cmp-nvim-lsp',
+--			'hrsh7th/cmp-path',
+--			'hrsh7th/cmp-emoji',
+--			'hrsh7th/cmp-nvim-lsp-signature-help',
+--			'hrsh7th/cmp-nvim-lua'
+--		},
+--		config = function()
+--			require('plugins/cmp')
+--		end
+--	}
+
+
 	use {
-		'hrsh7th/nvim-cmp',
+		"hrsh7th/nvim-cmp",
 		requires = {
-			'L3MON4D3/LuaSnip',
-			'saadparwaiz1/cmp_luasnip',
-			'hrsh7th/cmp-nvim-lsp',
-			'hrsh7th/cmp-path',
-			'hrsh7th/cmp-emoji',
-			'hrsh7th/cmp-nvim-lsp-signature-help',
-			'hrsh7th/cmp-nvim-lua'
-		},
-		config = function()
-			require('plugins/cmp')
-		end
-	}
+		    "hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp",
+		    'quangnguyen30192/cmp-nvim-ultisnips', 'hrsh7th/cmp-nvim-lua',
+		    'octaltree/cmp-look', 'hrsh7th/cmp-path', 'hrsh7th/cmp-calc',
+		    'f3fora/cmp-spell', 'hrsh7th/cmp-emoji'
+		}
+	    }
+	    use {
+		'tzachar/cmp-tabnine',
+		run = './install.sh',
+		requires = 'hrsh7th/nvim-cmp'
+	    }
 
 	-- Иконки для автодополнения
 	use {
