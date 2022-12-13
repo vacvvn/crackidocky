@@ -1,5 +1,5 @@
 -- Алиас для быстрого доступа к методу установки горячих клавиш
-local map = vim.api.nvim_set_keymap 
+local map = vim.api.nvim_set_keymap
 
 --[[
 Метод для установки горячих клавиш (normal)
